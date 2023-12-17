@@ -1,15 +1,19 @@
+plugins {
+    id 'org.cyclonedx.bom' version '1.8.1'
+    id 'java'
+    id 'idea'
+    id 'eclipse'
+    id 'application'
+}
+
 group 'AP'
 version '1.0'
 
-plugins {
-    id 'org.cyclonedx.bom' version '1.8.1'
-}
 
-apply plugin: 'java'
-apply plugin: 'idea'
-apply plugin: 'eclipse'
-apply plugin: 'application'
-
+// apply plugin: 'java'
+// apply plugin: 'idea'
+// apply plugin: 'eclipse'
+// apply plugin: 'application'
 
 sourceCompatibility = 1.8
 mainClassName = "Main"
