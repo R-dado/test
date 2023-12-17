@@ -9,11 +9,11 @@ plugins {
 group 'AP'
 version '1.0'
 
-
-// apply plugin: 'java'
-// apply plugin: 'idea'
-// apply plugin: 'eclipse'
-// apply plugin: 'application'
+apply plugin: 'org.cyclonedx.bom'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'eclipse'
+apply plugin: 'application'
 
 sourceCompatibility = 1.8
 mainClassName = "Main"
