@@ -6,10 +6,20 @@ plugins {
     id 'application'
 }
 
+cyclonedxBom {
+    includeConfigs = ["compileCompileClasspath"]
+    projectType = "application"
+    schemaVersion = "1.5"
+    destination = file("build/reports")
+    outputName = "bom"
+    outputFormat = "all"
+    includeBomSerialNumber = true
+    componentVersion = "2.0.0"
+}
+
 group 'AP'
 version '1.0'
 
-apply plugin: 'org.cyclonedx.bom'
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
@@ -51,3 +61,4 @@ task archive(type: Zip) {
 
     includeEmptyDirs = false
 }
+build.finalizedBy('cyclonedxBom')
